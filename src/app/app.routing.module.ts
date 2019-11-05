@@ -7,7 +7,7 @@ import {Routes,RouterModule} from '@angular/router';
 
 const routes:Routes =[
   {path:'/',redirectTo:'employees',pathMatch:'full'},
-  {path:'employess',component:EmployeeListComponent},
+  {path:'employees',component:EmployeeListComponent},
   //{path:'add',component:CreateEmployeeComponent},
  // {path:'update/:id',component:UpdateEmployeeComponent},
  /// {path:'delete/:id',component:EmployeeDetailsComponent}
