@@ -11,7 +11,7 @@ import {UpdateEmployeeComponent} from './update-employee/update-employee.compone
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule ],
   declarations: [ AppComponent, HelloComponent,CreateEmployeeComponent,EmployeeListComponent, EmployeeDetailsComponent, UpdateEmployeeComponent ],
   bootstrap:    [ AppComponent ]
 })
