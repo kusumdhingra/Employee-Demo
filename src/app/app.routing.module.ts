@@ -6,7 +6,7 @@ import {NgModule} from '@angular/core';
 import {Routes,RouterModule} from '@angular/router';
 
 const routes:Routes =[
-  {path:'/',redirectTo:'employees',pathMatch:'full'},
+  {path:'',redirectTo:'employees',pathMatch:'full'},
   {path:'employees',component:EmployeeListComponent},
   //{path:'add',component:CreateEmployeeComponent},
  // {path:'update/:id',component:UpdateEmployeeComponent},
