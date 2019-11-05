@@ -23,7 +23,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "update": "ng update --all --force && npm install typescript@3.5.3 && npm install zone.js@0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
