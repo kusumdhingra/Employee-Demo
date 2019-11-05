@@ -7,13 +7,12 @@ import { HelloComponent } from './hello.component';
 import {EmployeeDetailsComponent} from './employee-details/employee-details.component';
 import {CreateEmployeeComponent} from './create-employee/create-employee.component';
 import {EmployeeListComponent} from './employee-list/employee-list.component';
-
-//import {UpdateEmployeeComponent} from './update-employee/update-employee.component'; 
+import {UpdateEmployeeComponent} from './update-employee/update-employee.component'; 
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent,CreateEmployeeComponent,EmployeeListComponent, EmployeeDetailsComponent ],
+  declarations: [ AppComponent, HelloComponent,CreateEmployeeComponent,EmployeeListComponent, EmployeeDetailsComponent,UpdateEmployeeComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
