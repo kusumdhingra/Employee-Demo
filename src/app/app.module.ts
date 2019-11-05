@@ -12,7 +12,7 @@ import { HelloComponent } from './hello.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule],
+  imports:      [ BrowserModule, AppRoutingModule,FormsModule],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ]
 })
