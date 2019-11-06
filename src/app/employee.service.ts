@@ -21,7 +21,7 @@ export class EmployeeService{
   deleteEmployee(id:number):Observable<Object>{
     return this.http.delete(`${this.baseUrl}/${id}`);
   }
-  getEmployeeList(id):Observable<Object>{
+  getEmployeeList():Observable<Object>{
     return this.http.get(`${this.baseUrl}`);
   }
 
