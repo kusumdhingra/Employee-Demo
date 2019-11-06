@@ -37,7 +37,7 @@ export class EmployeeListComponent implements OnInit{
     "Type": "Hawk",
     "Scientific Name": "Accipiter cooperii" 
 }];
-    this.employeeService.getEmployeeList();
+   // this.employeeService.getEmployeeList();
   }
 
 }
