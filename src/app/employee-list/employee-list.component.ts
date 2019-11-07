@@ -41,6 +41,13 @@ export class EmployeeListComponent implements OnInit{
   }
 
   deleteEmployee(id:number){
+      for(i=0;i<this.employess.length;i++){
+        if(this.employess[i].id==id){
+          var removedObject = this.employess.splice(i,1);
+          removedObject = null;
+          break;
+        }
+      }
       this.employeeService.deleteEmployee(id).subscribe(data=>{console.log(data);this.reloadData();},error=>console.log(error))
   }
 
