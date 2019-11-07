@@ -19,7 +19,8 @@ export class EmployeeListComponent implements OnInit{
   ngOnInit(){this.reloadData();}
 
   reloadData(){
-    this.employees={};/**[{
+    //this.employees={};
+    /**[{
     "ID": "001",
    "Name": "Eurasian Collared-Dove",
     "Type": "Dove",
