@@ -19,7 +19,7 @@ export class EmployeeListComponent implements OnInit{
   ngOnInit(){this.reloadData();}
 
   reloadData(){
-    this.employees=[{
+    this.employees={};/**[{
     "ID": "001",
    "Name": "Eurasian Collared-Dove",
     "Type": "Dove",
@@ -36,7 +36,7 @@ export class EmployeeListComponent implements OnInit{
     "Name": "Cooper's Hawk",
     "Type": "Hawk",
     "Scientific Name": "Accipiter cooperii" 
-}];
+}];*/
    // this.employeeService.getEmployeeList();
   }
 
