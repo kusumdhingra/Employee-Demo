@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-//import { EmployeeDetailsComponent} from '../employee-details/employee-details.component';
+import { EmployeeDetailsComponent} from '../employee-details/employee-details.component';
 import {Router} from '@angular/router';
 import {EmployeeService} from '../employee.service';
 import {Employee} from '../employee';
@@ -15,19 +15,19 @@ export class EmployeeListComponent implements OnInit{
   constructor(private employeeService:EmployeeService, private router:Router){}
  ngOnInit(){
    this.employees=[{
-    "ID": "001",
+    "id": "001",
    "firstName": "Eurasian Collared-Dove",
     "lastName": "Dove",
     "email": "Streptopelia@gmail.com"
 },
 {
-    "ID": "002",
+    "id": "002",
     "firstName": "Bald Eagle",
     "lastName": "Hawk",
     "email": "Haliaeetusleucocephalus@gmail.com" 
 },
 {
-    "ID": "003",
+    "id": "003",
     "firstName": "Cooper's Hawk",
     "lastName": "Hawk",
     "email": "Accipitercooperii@gmail.com" 
@@ -47,7 +47,7 @@ export class EmployeeListComponent implements OnInit{
           removedObject = null;
           break;
         }
-      }*/
+      }*/alert(id);
        console.log(this.employees);
       var ind = this.employees.indexOf(function(element){
       return element.id===id;
@@ -58,8 +58,8 @@ export class EmployeeListComponent implements OnInit{
    this.reloadData();
       this.employeeService.deleteEmployee(id).subscribe(data=>{console.log(data);this.reloadData();},error=>console.log(error))
   }
-  employeeDetails(id:number){
-    this.router.navigate(['/details',id]);
+  employeeDetails(id:number){alert(id);
+    this.router.navigate(['details']);console.log("hello");
   }
 
 }
