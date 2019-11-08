@@ -14,7 +14,7 @@ import {EmployeeListComponent} from './employee-list/employee-list.component';
 
 @NgModule({
   imports:      [ BrowserModule, AppRoutingModule,FormsModule,HttpClientModule],
-  declarations: [ AppComponent, HelloComponent,EmployeeListComponent ],
+  declarations: [ AppComponent, HelloComponent,EmployeeListComponent,EmployeeDetailsComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
