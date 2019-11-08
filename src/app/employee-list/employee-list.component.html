@@ -18,8 +18,8 @@
       <td>{{employee.firstName}}</td>
       <td>{{employee.lastName}}</td>
       <td>{{employee.email}}</td>
-      <td><button class="btn btn-danger" onclick="deleteEmployee(employee.id)">Delete</button>
-          <button class="btn btn-info" onclick="employeeDetails(employee.id)" style="margin-left:10px;">Details</button>
+      <td><button class="btn btn-danger" (click)="deleteEmployee(employee.id)">Delete</button>
+          <button class="btn btn-info" (click)="employeeDetails(employee.id)" style="margin-left:10px;">Details</button>
       </td>
     </tr>   
     </tbody>

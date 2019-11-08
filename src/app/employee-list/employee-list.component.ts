@@ -41,14 +41,25 @@ export class EmployeeListComponent implements OnInit{
   }
 
   deleteEmployee(id:number){
-      for(i=0;i<this.employess.length;i++){
+      /*for(let i=0;i<this.employess.length;i++){
         if(this.employess[i].id==id){
           var removedObject = this.employess.splice(i,1);
           removedObject = null;
           break;
         }
-      }
+      }*/
+       console.log(this.employees);
+      var ind = this.employees.indexOf(function(element){
+      return element.id===id;
+    })
+    
+    this.employees.splice(ind, 1);
+   
+   this.reloadData();
       this.employeeService.deleteEmployee(id).subscribe(data=>{console.log(data);this.reloadData();},error=>console.log(error))
+  }
+  employeeDetails(id:number){
+    this.router.navigate(['/details',id]);
   }
 
 }
