@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { EmployeeDetailsComponent} from '../employee-details/employee-details.component';
 import {Router} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 import {EmployeeService} from '../employee.service';
 import {Employee} from '../employee';
 import {Observable} from 'rxjs';
@@ -12,7 +13,8 @@ import {Observable} from 'rxjs';
 
 export class EmployeeListComponent implements OnInit{
   employees:Observable<Employee>;
-  constructor(private employeeService:EmployeeService, private router:Router){}
+  constructor(private employeeService: EmployeeService,private route: ActivatedRoute,private router: Router
+    ){}
  ngOnInit(){
    this.employees=[{
     "id": "001",

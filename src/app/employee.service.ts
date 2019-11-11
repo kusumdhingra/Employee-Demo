@@ -10,7 +10,7 @@ export class EmployeeService{
 
   getEmployee(id:number){
     return this.http.get(`${this.baseUrl}/${id}`);
-  };
+  }
   createEmployee(employee)
   {
     return this.http.post(`${this.baseUrl}`,employee);
