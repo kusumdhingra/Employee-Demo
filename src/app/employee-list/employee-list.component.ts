@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { EmployeeDetailsComponent} from '../employee-details/employee-details.component';
-import {Router} from '@angular/router';
-import {ActivatedRoute} from '@angular/router';
+//import {} from '@angular/router';
+import {Router,ActivatedRoute} from '@angular/router';
 import {EmployeeService} from '../employee.service';
 import {Employee} from '../employee';
 import {Observable} from 'rxjs';
@@ -12,9 +12,8 @@ import {Observable} from 'rxjs';
 })
 
 export class EmployeeListComponent implements OnInit{
-  employees:Observable<Employee>;
-  constructor(private employeeService: EmployeeService,private route: ActivatedRoute,private router: Router
-    ){}
+  //employees:Observable<Employee>;
+  constructor(private employeeService: EmployeeService,private route: ActivatedRoute,private router: Router){}
  ngOnInit(){
    this.employees=[{
     "id": "001",
@@ -61,7 +60,8 @@ export class EmployeeListComponent implements OnInit{
       this.employeeService.deleteEmployee(id).subscribe(data=>{console.log(data);this.reloadData();},error=>console.log(error))
   }
   employeeDetails(id:number){alert(id);
-    this.router.navigate(['details']);console.log("hello");
+    /this.router.navigate(['details',id]);console.log("hello");
+    this.router.navigate(['details', id]);
   }
 
 }

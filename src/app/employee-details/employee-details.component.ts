@@ -13,9 +13,13 @@ import {Router,ActivatedRoute} from '@angular/router';
 
 
 export class EmployeeDetailsComponent implements OnInit{
-  employee:Employee;
+ // employee:Employee;
+  id:number;
 
-  constructor(private employeeService: EmployeeService,private router: Router,private route: ActivatedRoute
-    ){}
-  ngOnInit(){}
+  construct(private router: Router,private route: ActivatedRoute,private employeeservice:EmployeeService){}
+  ngOnInit(){console.log(1);
+    this.id= this.route.snapshot.params['id'];
+    
+    console.log(this.id);
+  }
 }
