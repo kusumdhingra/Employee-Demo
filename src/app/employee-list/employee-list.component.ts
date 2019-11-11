@@ -60,7 +60,7 @@ export class EmployeeListComponent implements OnInit{
       this.employeeService.deleteEmployee(id).subscribe(data=>{console.log(data);this.reloadData();},error=>console.log(error))
   }
   employeeDetails(id:number){alert(id);
-    /this.router.navigate(['details',id]);console.log("hello");
+    //this.router.navigate(['details',id]);console.log("hello");
     this.router.navigate(['details', id]);
   }
 

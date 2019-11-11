@@ -14,7 +14,7 @@ import {Router,ActivatedRoute} from '@angular/router';
 
 export class EmployeeDetailsComponent implements OnInit{
  // employee:Employee;
-  id:number;
+  id: number;
 
   construct(private router: Router,private route: ActivatedRoute,private employeeservice:EmployeeService){}
   ngOnInit(){console.log(1);
