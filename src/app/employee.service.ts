@@ -7,9 +7,28 @@ import { Observable } from 'rxjs';
 export class EmployeeService{
   private baseUrl = '';
   constructor(private http: HttpClient){};
+employees=[{
+    "id": "001",
+   "firstName": "Eurasian Collared-Dove",
+    "lastName": "Dove",
+    "email": "Streptopelia@gmail.com"
+},
+{
+    "id": "002",
+    "firstName": "Bald Eagle",
+    "lastName": "Hawk",
+    "email": "Haliaeetusleucocephalus@gmail.com" 
+},
+{
+    "id": "003",
+    "firstName": "Cooper's Hawk",
+    "lastName": "Hawk",
+    "email": "Accipitercooperii@gmail.com" 
+}];
 
   getEmployee(id:number){
     return this.http.get(`${this.baseUrl}/${id}`);
+    this.employees.filter(employee=>employee.id==id)
   }
   createEmployee(employee)
   {
