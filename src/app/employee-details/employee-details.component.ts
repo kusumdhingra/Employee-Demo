@@ -22,11 +22,12 @@ export class EmployeeDetailsComponent implements OnInit {
 
     this.id = this.route.snapshot.params['id'];
      console.log(this.id);
-    this.employeeService.getEmployee(this.id)
+     this.employee=this.employeeService.getEmployee(this.id);console.log(this.employee);
+    /*this.employeeService.getEmployee(this.id)
       .subscribe(data => {
         console.log(data)
         this.employee = data;
-      }, error => console.log(error));
+      }, error => console.log(error));*/
   }
 
   list(){

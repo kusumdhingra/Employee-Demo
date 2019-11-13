@@ -27,8 +27,8 @@ employees=[{
 }];
 
   getEmployee(id:number){
-    return this.http.get(`${this.baseUrl}/${id}`);
-    this.employees.filter(employee=>employee.id==id)
+    //return this.http.get(`${this.baseUrl}/${id}`);
+    return this.employees.filter(employee=>{ if(employee.id==id) return employee;})
   }
   createEmployee(employee)
   {
