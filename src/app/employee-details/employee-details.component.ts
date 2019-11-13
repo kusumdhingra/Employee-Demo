@@ -1,26 +1,35 @@
+import { Employee } from '../employee';
+import { Component, OnInit, Input } from '@angular/core';
+import { EmployeeService } from '../employee.service';
+import { EmployeeListComponent } from '../employee-list/employee-list.component';
+import { Router, ActivatedRoute } from '@angular/router';
 
-import {Employee} from '../employee';
-import {EmployeeServie} from '../employee.service';
-import {Component, Input, OnInit} from '@angular/core';
-import {Router,ActivatedRoute} from '@angular/router';
-
-//import {Router,ActivatedRoute} from '@angular/router';
 @Component({
-  selector:'app-employee-details',
-  templateUrl:'./employee-details.component.html',
-  styleUrls:['./employee-details.component.css']
+  selector: 'app-employee-details',
+  templateUrl: './employee-details.component.html',
+  styleUrls: ['./employee-details.component.css']
 })
+export class EmployeeDetailsComponent implements OnInit {
 
-
-export class EmployeeDetailsComponent implements OnInit{
- // employee:Employee;
   id: number;
+  employee: Employee;
 
- constructo(private router: Router,private route: ActivatedRoute,private employeeservice:EmployeeService){ }
-  //constructor(private route: ActivatedRoute,private router: Router, private employeeService: EmployeeService) { }
-  ngOnInit(){console.log(1);
-    this.id= this.route.snapshot.params['id'];
-    
-    console.log(this.id);
+  constructor(private route: ActivatedRoute,private router: Router,
+    private employeeService: EmployeeService) { }
+
+  ngOnInit() {
+    this.employee = new Employee();
+
+    this.id = this.route.snapshot.params['id'];
+     console.log(this.id);
+    this.employeeService.getEmployee(this.id)
+      .subscribe(data => {
+        console.log(data)
+        this.employee = data;
+      }, error => console.log(error));
+  }
+
+  list(){
+    this.router.navigate(['employees']);
   }
 }
