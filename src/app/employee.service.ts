@@ -32,7 +32,7 @@ employees=[{
   }
   createEmployee(employee)
   {
-    
+    console.log(employee);
      this.employees.push(employee);console.log(this.employees);
      //this.employees.push(employee);console.log();
      return this.http.post(`${this.baseUrl}`,employee);
