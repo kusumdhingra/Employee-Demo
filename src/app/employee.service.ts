@@ -21,7 +21,7 @@ employees=[{
 },
 {
     "id": "003",
-    "firstName": "Cooper's Hawk",
+    "firstName": "Cooper's Hawk",ole.log
     "lastName": "Hawk",
     "email": "Accipitercooperii@gmail.com" 
 }];
@@ -32,7 +32,10 @@ employees=[{
   }
   createEmployee(employee)
   {
-    return this.http.post(`${this.baseUrl}`,employee);
+    
+     this.employees.push(employee);console.log();
+     this.employees.push(employee);console.log();
+     return this.http.post(`${this.baseUrl}`,employee);
   }
   updateEmployee(id:number,value:any):Observable<Object>{
     return this.http.put(`${this.baseUrl}`,value)
