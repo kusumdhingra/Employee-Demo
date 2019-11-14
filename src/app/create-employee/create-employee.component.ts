@@ -14,8 +14,5 @@ export class CreateEmployeeComponent implements OnInit {
   submitted:false;
   constructor(){};
   ngOnInit(){}
-  newEmployee(): void {
-    this.submitted = false;
-    this.employee = new Employee();
-  }
+ 
 }
