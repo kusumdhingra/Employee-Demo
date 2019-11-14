@@ -18,7 +18,7 @@ export class CreateEmployeeComponent implements OnInit {
     this.submitted = false;
     this.employee = new Employee();
   }
-  onSubmit(){
+  onsubmit(){
     this.submitted=true;
     this.save();
   }
