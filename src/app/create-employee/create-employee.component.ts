@@ -1,4 +1,8 @@
 import { Component, Input,OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
+import { Employee } from '../employee';
+import { Router } from '@angular/router';
+
 @Component({
   selector:'app-create-employee',
   templateUrl:'./create-employee.component.html',
@@ -6,7 +10,7 @@ import { Component, Input,OnInit } from '@angular/core';
 
 })
 export class CreateEmployeeComponent implements OnInit {
-
+  employee:Employee = new Employee();
   constructor(){};
   ngOnInit(){};
 }

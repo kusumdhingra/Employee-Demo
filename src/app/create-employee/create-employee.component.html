@@ -1,6 +1,6 @@
 <h3> Create Employee </h3>
 <div [hidden]="submitted" width="400px">
-  <form [ngSubmit]="onSubmit">
+  <form >
   <div class="form-group">    
     <label for="name">First Name</label>
     <input type="text" class="form-control" id="firstName" required [(ngModel)]="employee.firstName" />
@@ -13,7 +13,7 @@
     <label for="name">Email</label>
     <input type="text" class="form-control" id="email" required [(ngModel)]="employee.email" />
   </div>
-    <button type="submit" class="btn btn-submit">Submit</button>
+    <button type="submit" class="btn btn-success">Submit</button>
   </form>
 </div>
 <div [hidden]="!submitted">

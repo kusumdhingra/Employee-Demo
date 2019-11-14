@@ -2,6 +2,7 @@ import { Employee } from '../employee';
 import { Component, OnInit, Input } from '@angular/core';
 import { EmployeeService } from '../employee.service';
 import { EmployeeListComponent } from '../employee-list/employee-list.component';
+import { CreateEmployeeComponent } from '../employee-list/create-employee.component';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
