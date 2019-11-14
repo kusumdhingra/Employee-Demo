@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 
 })
 export class CreateEmployeeComponent implements OnInit {
-  employee:Employee;//= new Employee();
+  employee:Employe=new Employee();
   submitted:false;
   constructor(private employeeService:EmployeeService,){};
   ngOnInit(){}
